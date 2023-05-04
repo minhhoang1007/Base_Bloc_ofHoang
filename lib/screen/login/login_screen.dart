@@ -1,8 +1,8 @@
 import 'package:base_bloc_hoang/screen/login/login_bloc.dart';
 import 'package:base_bloc_hoang/screen/login/login_event.dart';
 import 'package:base_bloc_hoang/screen/login/login_state.dart';
+import 'package:base_bloc_hoang/screen/main/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'login_event.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -84,6 +84,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   onPressed: () {
                     // context.read<LoginBloc>().add(ResultQuestion());
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MainScreen()));
                   },
                   child: const Text('Login'),
                 ),
